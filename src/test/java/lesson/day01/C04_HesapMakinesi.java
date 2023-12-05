@@ -1,6 +1,5 @@
 package lesson.day01;
 
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.openqa.selenium.By;
@@ -13,7 +12,7 @@ import java.net.URL;
 
 import static java.lang.Thread.sleep;
 
-public class C02_hesapMakinesi {
+public class C04_HesapMakinesi {
     @Test
     public void test01() throws MalformedURLException, InterruptedException {
         UiAutomator2Options options = new UiAutomator2Options()
@@ -55,8 +54,6 @@ public class C02_hesapMakinesi {
         System.out.println(result.getText());
 
         Assert.assertEquals(result.getText(), preResultText);
-
-
-
+        
     }
 }
