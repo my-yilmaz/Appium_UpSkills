@@ -23,6 +23,7 @@ public class ApiDemosBaseTest {
 
 
         UiAutomator2Options options = new UiAutomator2Options()
+                .setUdid("7c37a059")
                 .setApp(appurl);
 
         URL url = new URL("http://0.0.0.0:4723");

@@ -22,6 +22,7 @@ public class GeneralStoreBaseTest {
                 + File.separator + ("General-Store.apk");
 
         UiAutomator2Options options = new UiAutomator2Options()
+                .setUdid("7c37a059")
                 .setApp(appUrl);
 
         URL url = new URL("http://0.0.0.0:4723");
