@@ -3,6 +3,7 @@ package lesson.day02;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
+import lesson.baseTest.ApiDemosBaseTest;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
@@ -24,7 +25,7 @@ public class C02_TemelEylemler extends ApiDemosBaseTest {
         driver.findElement(activity).click();
         driver.findElement(customTitle).click();
 
-        driver.findElement(leftTextBox).clear();
+        driver.findElement(leftTextBox).clear(); //! clear() methodu kutuda var olan metni siler
         driver.findElement(leftTextBox).sendKeys("Hello");
         driver.findElement(leftButton).click();
 

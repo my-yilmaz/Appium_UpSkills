@@ -1,6 +1,7 @@
 package lesson.day02;
 
 import io.appium.java_client.AppiumBy;
+import lesson.baseTest.ApiDemosBaseTest;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 
