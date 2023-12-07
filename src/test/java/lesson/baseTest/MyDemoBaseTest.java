@@ -2,6 +2,7 @@ package lesson.baseTest;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+import lesson.utilities.ReusableMethods;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -10,7 +11,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class MyDemoBaseTest {
+public class MyDemoBaseTest extends ReusableMethods {
     protected AndroidDriver driver;
 
     @BeforeMethod
@@ -29,6 +30,7 @@ public class MyDemoBaseTest {
         driver = new AndroidDriver(url, options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
+
     @AfterMethod
     public void tearDown() {
         driver.quit();

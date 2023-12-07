@@ -2,6 +2,7 @@ package lesson.baseTest;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+import lesson.utilities.ReusableMethods;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -10,7 +11,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class GeneralStoreBaseTest {
+public class GeneralStoreBaseTest extends ReusableMethods {
     protected AndroidDriver driver;
 
     @BeforeMethod
