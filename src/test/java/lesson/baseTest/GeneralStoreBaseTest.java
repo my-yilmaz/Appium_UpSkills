@@ -23,6 +23,8 @@ public class GeneralStoreBaseTest extends ReusableMethods {
                 + File.separator + ("General-Store.apk");
 
         UiAutomator2Options options = new UiAutomator2Options()
+                .setUnlockType("pattern") //! "pin" seçeneği de kullanılabilir.
+                .setUnlockKey("2589")
                 .setUdid("7c37a059")
                 .setApp(appUrl);
 
@@ -32,6 +34,6 @@ public class GeneralStoreBaseTest extends ReusableMethods {
     }
     @AfterMethod
     public void tearDown() {
-        driver.quit();
+        // driver.quit();
     }
 }

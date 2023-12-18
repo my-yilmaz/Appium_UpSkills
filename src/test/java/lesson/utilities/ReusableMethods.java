@@ -5,6 +5,10 @@ import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class ReusableMethods {
 
@@ -106,5 +110,11 @@ public class ReusableMethods {
                 "percent", percent,
                 "speed", speed
         ));
+    }
+
+    //Visible Wait
+    public static void visibleWait(AndroidDriver driver, WebElement element, int sayi) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(sayi));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 }
